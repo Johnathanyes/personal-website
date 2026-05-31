@@ -21,9 +21,9 @@ export default function ProjectSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
-          <a target="_blank" href="www.usemado.tech">
+          <a target="_blank" href="https://usemado.tech">
             <ProjectCard
-              title="Popsmart"
+              title="Mado.tech"
               desc="A B2B Saas that helps businesses create high conversion rate campaigns for any use case"
               tags={["Next.js", "Fastify", "Typescript", "Svelte", "Railway"]}
               icon={<Terminal size={20} />}
