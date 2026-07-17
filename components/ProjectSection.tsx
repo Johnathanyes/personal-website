@@ -21,6 +21,20 @@ export default function ProjectSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+          <a target="_blank" href="https://github.com/Johnathanyes/webhook-gateway">
+            <ProjectCard
+              title="Webhook Gateway (Name is WIP😅)"
+              desc="A Open Source webhook infrastructure tool that handles reception, inspection, replays, and retries. Built by me so you dont have to."
+              tags={["Next.js", "Fastify", "Typescript", "Svelte", "Railway"]}
+              icon={<Terminal size={20} />}
+              devBadge={true}
+            />
+
+          </a>
+
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
           <a target="_blank" href="https://usemado.tech">
             <ProjectCard
               title="Mado.tech"
@@ -44,9 +58,10 @@ interface ProjectCardProps {
   tags: string[];
   icon: React.ReactNode;
   mvpBadge?: boolean;
+  devBadge?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, desc, tags, icon, mvpBadge }) => (
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, desc, tags, icon, mvpBadge, devBadge }) => (
   <div className="group border border-zinc-800 bg-black p-8 hover:border-white/50 transition-all duration-300 cursor-pointer relative overflow-hidden">
     {/* Subtle gradient overlay on hover */}
     <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
@@ -66,6 +81,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, desc, tags, icon, mvpB
             <span className="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"></span>
           </span>
           MVP out
+        </span>
+      </motion.div>
+    )}
+
+    {devBadge && (
+      <motion.div
+        className="absolute top-4 right-4 z-20"
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-amber-500/5 border border-amber-400/30 rounded-full text-xs font-mono text-amber-300 backdrop-blur-sm shadow-[0_0_15px_rgba(251,191,36,0.3),0_0_30px_rgba(251,191,36,0.1)]">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.8)]"></span>
+          </span>
+          In Development
         </span>
       </motion.div>
     )}
