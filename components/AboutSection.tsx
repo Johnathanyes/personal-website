@@ -16,6 +16,7 @@ import SpringSVG from "@/public/technologies/Spring.svg"
 import TechStackWeb from "./TechStackComponent";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import GoSVG from "@/public/technologies/Go.svg"
 
 export default function AboutSection() {
   const sectionRef = useRef(null);
@@ -66,10 +67,11 @@ export default function AboutSection() {
             <TechStackWeb
               icons={[
                 { name: "TypeScript", icon: <TypeScriptSVG /> },
-                { name: "Next.js", icon: <NextjsSVG /> },
-                { name: "Python", icon: <PythonSVG /> },
-                { name: "PostgreSQL", icon: <PostgresqlSVG /> },
                 { name: "Docker", icon: <DockerSVG /> },
+                { name: "Python", icon: <PythonSVG /> },
+                { name: "Go", icon: <GoSVG /> },
+                { name: "PostgreSQL", icon: <PostgresqlSVG /> },
+                { name: "Next.js", icon: <NextjsSVG /> },
                 { name: "Node.js", icon: <NodeJSSVG /> },
                 { name: "Redis", icon: <RedisSVG /> },
                 { name: "AWS", icon: <AWSSVG /> },
@@ -77,7 +79,6 @@ export default function AboutSection() {
                 { name: "GitHub", icon: <GitHubSVG /> },
                 { name: "Git", icon: <GitSVG /> },
                 { name: "Java", icon: <JavaSVG /> },
-                { name: "Fastify", icon: <FastifySVG /> },
                 { name: "React", icon: <ReactSVG /> },
                 { name: "Spring", icon: <SpringSVG /> }
               ]}
